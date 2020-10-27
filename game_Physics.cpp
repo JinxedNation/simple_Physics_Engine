@@ -4,7 +4,9 @@
  *   Purpose  : Function periodically updates game model location and applies gravity
  *   Outputs  : None
  *   Author   : William
- ****************************/
+ * a
+ ****************************/ 
+
 
 void game_Physics::update_Game_Model()
 {
@@ -18,7 +20,7 @@ void game_Physics::update_Game_Model()
             glm::vec3 XYZ_Plane_Coordinate_Pos = obj_Model_Name.GetPosition();
             glm::vec3 previous_XYZ_Plane_Coordinate = XYZ_Plane_Coordinate_Pos;
 
-            //std::cout << "Before -> (TIME)" << time.deltaTime << ", (x)" << XYZ_Plane_Coordinate_Pos.x << ", (VEL)" << velocity_Of_Game_Obj_.x << ", (GRAV)" << gravity_Of_Game_Obj_.x;
+            ///std::cout << "Before -> (TIME)" << time.deltaTime << ", (x)" << XYZ_Plane_Coordinate_Pos.x << ", (VEL)" << velocity_Of_Game_Obj_.x << ", (GRAV)" << gravity_Of_Game_Obj_.x;
 
             XYZ_Plane_Coordinate_Pos.x = (previous_XYZ_Plane_Coordinate.x + (velocity_Of_Game_Obj_.x * Acceleration_Of_Game_Obj_.x) * time.deltaTime) + (gravity_Of_Game_Obj_.x * time.deltaTime * time.deltaTime / 2);
             XYZ_Plane_Coordinate_Pos.y = (previous_XYZ_Plane_Coordinate.y + (velocity_Of_Game_Obj_.y * Acceleration_Of_Game_Obj_.y) * time.deltaTime) + (gravity_Of_Game_Obj_.y * time.deltaTime * time.deltaTime / 2);
